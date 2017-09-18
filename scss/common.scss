@@ -1,0 +1,61 @@
+@mixin css3($name,$val){
+    -webkit-#{$name}:$val;
+    -moz-#{$name}:$val;
+    -ms-#{$name}:$val;
+    -o-#{$name}:$val;
+    #{$name}:$val;
+}
+@mixin opacity($value:0.9){
+    opacity: $value;
+    filter: alpha(opacity=$value*100);
+}
+body,p,h1,h2,h3,h4,h5,h6,ul,dl,dd,td,input,textarea,option{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font:12px "微软雅黑";
+    color: #666;
+}
+li{
+    list-style: none;
+    float: left;
+}
+a{
+    color: #666;
+    text-decoration: none;
+    @include css3("transition",all ease .2s);
+}
+a:hover{
+    color: #FF6600;
+    text-decoration: none;
+}
+img,input{
+    border: 0;
+    vertical-align: top;
+}
+a,input{
+    outline: none;
+}
+h1,h2,h3,h4,h5,h6,b,strong{
+    font-weight: 100;
+}
+i,em{
+    font-style: normal;
+}
+.clear{
+    zoom:1
+}
+.clear:after{
+    content: ".";
+    height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}

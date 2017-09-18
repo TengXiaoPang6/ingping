@@ -1,0 +1,127 @@
+$width:1200px;
+$margin:0 auto;
+$height:65px,256px,198px;
+$color:#FF6600,#EDEEF0;
+.promise_bg{
+    background: nth($color,1);
+    height: nth($height,1);
+    .promise{
+        height: nth($height,1);
+        width: $width;
+        margin: $margin;
+        ul{
+            height: nth($height,1);
+            li{
+                width: 232px;
+                height: nth($height,1);
+                margin-right: 10px;
+                line-height: nth($height,1);
+                font-weight: 600;
+                padding: 0 56px;
+                span{
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding-left: 10px;
+                    color: white;
+                    display: inline-block;
+                    vertical-align: middle;
+                }              
+            }
+            .no_margin{
+                margin-right: 0;
+            }
+        }
+    }
+}
+.foot_nav_bg{
+    height: nth($height,2);
+    background: white;
+    .foot_nav{
+        height: nth($height,2);
+        width: $width;
+        margin: $margin;
+        padding: 40px 0 0 30px;
+        ul{
+            width: 67px;
+            margin-right: 88px;
+            li{
+               float: none;
+               line-height: 24px;
+               height: 24px; 
+            }
+            .tit{
+                color: black;
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+        }
+        .say{
+            width: 240px;
+            position: relative;
+            p{
+                font-size: 30px;
+                color: nth($color,1);
+                font-weight: 700;
+                position: absolute;
+                top: 90px;
+                left: 40px;
+            }
+            span{
+                display: block;
+                padding-left: 90px;
+            }
+            a{
+                display: block;
+                height: 30px;
+                width: 120px;
+                border: 1px solid nth($color,1);
+                @include css3("border-radius",5px);
+                line-height: 30px;
+                text-align: center;
+                color: nth($color,1);
+                margin: 10px 0 0 100px;
+            }
+            a:hover{
+                background: nth($color,1);
+                color: white;
+            }
+        }
+    }
+}
+.address_bg{
+    height: nth($height,3);
+    background: #333;
+    .address{
+        width: $width;
+        margin: $margin;   
+        padding: 24px 0 0 0;
+        text-align: center;
+        color: #999;
+        h1{
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            margin-top: 0;
+        }
+        p{
+           height: 20px;
+           line-height: 20px;
+        }     
+        ul{
+            overflow: hidden;
+            margin: $margin;
+            width: 530px;
+            padding: 20px 0;
+            li{
+                margin-right: 10px;
+            }
+        }
+        a{
+            color: #999;
+        }
+        a:hover{
+            color: nth($color,1);
+        }
+    }
+}

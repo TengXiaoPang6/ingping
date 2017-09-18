@@ -1,0 +1,729 @@
+@import 'common';
+@import 'header';
+@import 'footer';
+@import 'aside';
+$width:1200px;
+$margin:0 auto;
+$height:100px,450px,521px;
+$color:#FF6600,#EDEEF0;
+body{
+    background: #F2F2F2 !important;
+}
+p,ul{
+    margin-bottom: 0 !important;
+}
+.img img{
+    @include css3("transition",all ease-out .5s)
+}
+.text{
+    @include css3("transition",all ease-out .4s);
+}
+.picture{
+    @include css3("transition",all ease-out .4s);
+}
+.title{
+    overflow: hidden;
+    h3{
+        font-size: 24px !important;
+        font-weight: 600 !important;
+        height: 30px;
+        float: left;
+        margin-top: 0;
+        span{
+            font-size: 26px;
+            color: nth($color,1);
+            display: block;
+            float: left;
+        }
+        p{
+            float: left;
+            white-space: pre;
+        }
+    }
+    ul{
+        height: 40px;
+        float: right;
+        margin-right: 10px;
+        li{
+            height: 40px;
+            line-height: 40px;
+            span{
+                white-space: pre;
+            }
+        }
+    }
+}
+.top_activity_bg{
+    height: nth($height,1);
+    background: #7508B1;
+    .top_activity{
+        background: url(../img/top.jpg) no-repeat center;
+        height:  nth($height,1);
+        width: $width;
+        margin: $margin;
+    }
+    .top_a{
+        position: absolute;
+        display:block;
+        height:  nth($height,1);
+        width:100%;
+        top: 0;
+        left: 0;
+    }
+}
+.banner{
+   height: nth($height,2);
+   position: relative;
+   ul.ul_img{
+       height: nth($height,2);
+       position: relative;
+       li{
+           height:  nth($height,2);
+           width: 100%;
+           position: absolute;
+           top: 0;
+           a{
+               display:block;
+               height: nth($height,2);
+               width: 100%;
+               img{
+                   height: nth($height,2);
+                   display:block;
+                   width: 770px;
+                   margin-left: 220px;
+               }
+           }
+       }
+   }
+   ul.ul_dot{
+       height: 8px;
+       position: relative;
+       top:-20px;
+       margin: $margin;
+       li{
+           height: 8px;
+           width: 40px;
+           margin-right: 5px;
+           background: white;
+           @include opacity(0.5);
+           cursor: pointer;
+       }
+       .active{
+            @include opacity(1);
+       }
+   }
+   .news{
+       height: 450px;
+       width: 220px;
+       position: absolute;
+       left:1000px;
+       top: 0;
+       background: white;
+       z-index: 99;
+       border-bottom: 1px solid nth($color,2);
+       border-top: 1px solid nth($color,2);
+       .info{
+           width: 220px;
+           height: 36px;
+           border-bottom: 1px solid nth($color,2);
+           @include css3("transition",all ease-out .5s);
+           background: url(../img/line.jpg) no-repeat 15px bottom;
+           position: relative;
+           li{
+               width: 55px;
+               height: 36px;
+               line-height: 36px;
+               text-align: center; 
+               ul{
+                   height: 162px;
+                   width: 220px;
+                   padding: 10px 20px;
+                   position: absolute;
+                   top: 36px;
+                   left: 0;
+                   li{
+                       width: 180px;
+                       float: none;
+                       height: 26px;
+                       line-height: 26px;
+                       text-align: left;
+                   }
+               }
+           }
+           .active>a{
+               color: nth($color,1);
+           }
+       }
+       .icon_nav{
+           width: 220px;
+           height: 228px;
+           position: absolute;
+           bottom: 0;
+           li{
+               width: 73px;
+               height: 76px;
+               border-right: 1px solid nth($color,2);
+               border-top: 1px solid nth($color,2);
+               text-align: center;
+               span{
+                   font-size: 25px;
+                   margin-top: 10px;
+               }
+               p{
+                   margin-top: 10px;
+               }
+           }
+           .no_border{
+               border-right:none
+           }
+       }
+   }
+}
+.img_nav{
+    width: $width;
+    margin: $margin;
+    margin-top: 15px;
+    overflow: hidden;
+    a{
+        display: block;
+        margin-right: 10px;
+        float: left;
+        position: relative;
+        overflow: hidden;
+        .bg1{
+            background: white;
+            @include opacity(0.2);
+            position: absolute;
+            width: 240px;
+            height: 250px;
+            top: 0px;
+            left: -280px;   
+            @include css3("transform", rotate(60deg))
+        }
+        .bg2{
+            background: white;
+            @include opacity(0.2);
+            position: absolute;
+            width: 240px;
+            height: 250px;
+            top: -84px;
+            left: 280px;   
+            @include css3("transform", rotate(60deg))
+        }
+    }
+    .no_margin{
+        margin-right: 0;
+    }
+}
+.like{
+    width: $width;
+    margin: $margin;
+    margin-top: 32px;
+    height: 312px;
+    .change{
+        overflow: hidden;
+        height: 40px;
+        line-height: 40px;
+        width: 55px;
+        margin-right: 10px;
+        span{
+            display: block;
+            float: left;
+            line-height: 40px;
+        }
+        p{
+            float: right;
+        }
+    }
+    .goods{
+        width: $width;
+        height: 272px;
+        float: left;
+        ul{
+            height: 272px;
+            li{
+                height: 272px;
+                border: 1px solid nth($color,2);
+                width: 233px;
+                margin-right: 8px;
+                background: white;
+                padding: 0 14px;
+                position: relative;
+                top:0;
+                @include css3("transition",all ease-out .5s); 
+                a{
+                    display: block;
+                    .img{
+                        height: 190px;
+                        width: 205px;
+                        text-align: center;
+                        span{
+                            height: 100%;
+                            width: 0;
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                        img{
+                            vertical-align: middle;
+                        }
+                        img:hover{
+                            @include css3("transform",scale(1.1));
+                        }
+                    }
+                    p{
+                        font-size: 14px;
+                        height: 50px;
+                    }
+                }
+                span{
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: nth($color,1);
+                }
+            }
+            li:hover{
+                @include css3("box-shadow",4px 4px 3px rgba(0,0,0,0.2));
+                top:-5px;
+            }
+            .no_margin{
+                margin-right: 0;
+            }
+        }
+    }
+}
+.hotsale{
+    width: $width;
+    margin: $margin;
+    margin-top: 32px;
+    .sale{
+        height: 400px;
+        a{
+            display: block;
+            height: 100%;
+        }
+        .img{
+            width: 400px;
+            margin-right: 10px;
+            @include css3("transition",all ease-out .5s);
+            .two{
+                margin-top: 10px;
+            }
+        }
+        img:hover{
+            @include opacity(0.7);
+        }
+        ul{
+            width: 790px;
+            height: 400px;
+            li{
+                background: white;
+                width: 212px;
+                height: 195px;
+                padding: 20px 0 0 15px;
+                border: 1px solid nth($color,2);
+                margin-right: 8px;
+                position: relative;
+                .text{
+                    position: absolute;
+                    z-index: 10;
+                    width: 197px;
+                    p{
+                        color: #666;
+                    }
+                    h4{
+                        color: black;
+                        font-size: 18px;
+                        height: 30px;
+                        margin: 5px 0 0 0;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        padding-right: 10px;
+                    }
+                    span{
+                        color: nth($color,1);
+                        font-weight: 700;
+                        font-size: 16px;
+                    }
+                }
+                img{
+                    position: absolute;
+                    right: 15px;
+                    bottom: 0;
+                }
+                .cu{
+                    z-index: 11;
+                    top: 0;
+                    right: 0;
+                    width: 28px;
+                    height: 31px;
+                }
+            }
+            li:hover{
+                .picture{
+                    @include css3("transform",translateX(-10px));
+                }
+                .text{
+                     @include css3("transform",translateX(10px));
+                }
+            }
+            .no_margin{
+                margin-right: 0;
+            }
+            .mb{
+                margin-bottom: 10px;
+            }
+            .big{
+                width: 570px;
+            }
+            .middle{
+                width: 350px;
+            }
+        }
+    }
+}
+.floor{
+    width: $width;
+    margin: $margin;
+    height: nth($height,3);
+    margin-top: 35px;
+    .img{
+        width: 400px;
+        height: 400px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        @include css3("transition",all ease-out .5s);
+    }
+    .img:hover{
+        @include opacity(0.7);
+    }
+    ul.fl{
+        a{
+            display: block;
+            height: 100%;
+        }
+        width: 790px;
+        height: 400px;
+        li{
+            background: white;
+            width: 212px;
+            height: 195px;
+            padding: 20px 0 0 15px;
+            border: 1px solid nth($color,2);
+            margin-right: 8px;
+            position: relative;
+            .text{
+                position: absolute;
+                z-index: 10;
+                width: 197px;
+                p{
+                    color: #666;
+                }
+                h4{
+                    color: black;
+                    font-size: 18px;
+                    height: 30px;
+                    margin: 5px 0 0 0;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    padding-right: 10px;
+                }
+                span{
+                    color: nth($color,1);
+                    font-weight: 700;
+                    font-size: 16px;
+                }
+            }
+            img{
+                position: absolute;
+                right: 15px;
+                bottom: 0;
+            }
+        }
+        li:hover{
+            .picture{
+                @include css3("transform",translateX(-10px));
+            }
+            .text{
+                 @include css3("transform",translateX(10px));
+            }
+        }
+        .no_margin{
+            margin-right: 0;
+        }
+        .mb{
+            margin-bottom: 10px;
+        }
+        .big1{
+            width: 350px;
+            background:#f1fff0 ;
+        }
+        .big2{
+            width: 350px;
+            background:#fff5eb;
+        }
+    }   
+    ul.floor_brand{
+        clear: both;
+        height: 70px;
+        width: $width;
+        background: white;
+        border-bottom: 2px solid nth($color,1);
+        li{
+            width: 120px;
+            height: 68px;
+            text-align: center;
+            padding-top: 9px;
+            img{
+                @include css3("transition",all ease-out .4s);
+            }
+        }
+        li:hover{
+            img{
+                @include css3("transform",scale(1.1));
+            }
+        }
+    }     
+}
+.order{
+    width: $width;
+    margin: $margin;
+    margin-top: 32px;
+    height: 400px;
+    .comment{
+        width: $width;
+        height: 355px;
+        a{
+            display: block;
+        }
+        dl{
+            width: 232px;
+            height: 355px;
+            float: left;
+            background: white;
+            position: relative;
+            top: 0;
+            margin-right: 10px;
+            @include css3("transition",all ease-out .5s);
+            dd{
+                img{
+                    width: 232px;
+                    height: 174px;
+                }
+            }
+            dt{
+                padding: 15px;
+                height: 45px;
+                overflow: hidden;
+                font-weight: 100;
+            }
+            .info{
+                width: 203px;
+                height: 65px;
+                background: #f2f2f2;
+                margin: 15px 0 0 15px;
+                padding: 2px;
+                @include css3("transition",all ease-out .5s);
+                position: relative;
+                top: 0;
+                .name{
+                    width: 138px;
+                    padding: 15px 10px;
+                    p{
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+            .info:hover{
+                top:-5px;
+                @include css3("box-shadow",4px 4px 3px rgba(0,0,0,0.2));
+            }
+            .user{
+                border-top: 1px solid nth($color,2);
+                height: 39px;
+                padding: 0 10px;
+                margin-top: 15px;
+                p{
+                    height: 39px;
+                    line-height: 39px;
+                    color: #666;
+                }
+                
+            }
+        }
+        dl:hover{
+            top:-5px;
+            @include css3("box-shadow",4px 4px 3px rgba(0,0,0,0.2));
+        }
+        .no_margin{
+            margin-right: 0;
+        }
+    }
+}
+.message{
+    width: $width;
+    margin: 32px auto;
+    height: 297px;
+    .infomation{
+        height: 254px;
+             dl{
+                width: 232px;
+                height: 254px;
+                float: left;
+                background: white;
+                position: relative;
+                top: 0;
+                margin-right: 10px;
+                @include css3("transition",all ease-out .5s);
+                dd{
+                    img{
+                        width: 232px;
+                        height: 145px;
+                    }
+                }
+                dt{
+                    padding: 15px;
+                    height: 45px;
+                    overflow: hidden;
+                    font-weight: 100;
+                }
+                .user{
+                    border-top: 1px solid nth($color,2);
+                    height: 39px;
+                    padding: 0 10px;
+                    margin-top: 15px;
+                    p{
+                        height: 39px;
+                        line-height: 39px;
+                        color: #666;
+                    }
+                    
+                }
+            }
+            dl:hover{
+                top:-5px;
+                @include css3("box-shadow",4px 4px 3px rgba(0,0,0,0.2));
+            }
+            .no_margin{
+                margin-right: 0;
+            }
+    }
+}
+.fix_nav_bg{
+    height: 52px;
+    border-bottom: 1px solid nth($color,1);
+    @include css3("box-shadow",0 3px 3px rgba(0,0,0,0.2));
+    position: fixed;
+    top: 0;
+    background: white;
+    z-index:200;
+    display: none;
+    .fix_nav{
+        width: $width;
+        height: 52px;
+        margin: $margin;
+        h1{
+            height: 52px;
+            margin: 0;
+            a{
+                display: block;
+                img{
+                    height: 52px;
+                }
+            }
+        }
+        .search{
+            margin:8px 0 0 180px;
+            width: 550px;
+            position: relative;
+            input{
+                background: nth($color,2);
+                width: 480px;
+                height: 33px;
+                padding-left: 10px;
+                color: #999;
+                line-height: 33px;
+            }
+            .button{
+                width: 70px;
+                height: 33px;
+                background: nth($color,1);
+                color: white;
+                line-height: 33px;
+                text-align: center;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .tip{
+                position: absolute;
+                left: 0;
+                top: 41px;
+                width: 480px;
+                z-index: 200;
+                ul{
+                    border: 1px solid nth($color,2);
+                    border-top: none;
+                    width: 437px;
+                    background: white;
+                    display: none;
+                    li{
+                        height: 30px;
+                        padding-left: 10px;
+                        float: none;
+                        line-height: 30px;
+                        @include css3("transition",all ease .2s);
+                        cursor: pointer;
+                    }
+                    li:hover{
+                        color: nth($color,1);
+                        background: nth($color,2);
+                    }
+                }
+            }
+        }
+    }
+}
+.left_nav{
+    width: 32px;
+    height: 414px;
+    position: fixed;
+    left: 0;
+    bottom: 60px;
+    display: none;
+    ul{
+        li{
+            width: 32px;
+            height: 45px;
+            float: none;
+            color: white;
+            background: #333;
+            line-height: 16px;
+            padding-top: 6px;
+            text-align: center;
+            margin-bottom: 1px;
+            @include css3("border-radius",5px);
+            @include css3("transition",all ease-out .5s);
+            cursor: pointer;
+        }
+        li:hover{
+            background: nth($color,1);
+        }
+        .daohang{
+            line-height: 45px;
+            padding: 0;
+            background: nth($color,1);
+            cursor: auto;
+        }
+        .top span{
+            display: block;
+            width: 32px;
+            height: 14px;
+        }
+        .active{
+            background: nth($color,1);
+        }
+    }
+}
