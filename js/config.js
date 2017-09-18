@@ -4,6 +4,6 @@ requirejs.config({
 		"jquery":"jquery.min",
 		"header":"header.min",
 		"footer":"footer.min",
-		"aside":"aside.min"
+		"aside":"aside.min",
 	}
 })

@@ -9,9 +9,6 @@ $color:#FF6600,#EDEEF0;
 body{
     background: #F2F2F2 !important;
 }
-p,ul{
-    margin-bottom: 0 !important;
-}
 .img img{
     @include css3("transition",all ease-out .5s)
 }
@@ -51,24 +48,6 @@ p,ul{
                 white-space: pre;
             }
         }
-    }
-}
-.top_activity_bg{
-    height: nth($height,1);
-    background: #7508B1;
-    .top_activity{
-        background: url(../img/top.jpg) no-repeat center;
-        height:  nth($height,1);
-        width: $width;
-        margin: $margin;
-    }
-    .top_a{
-        position: absolute;
-        display:block;
-        height:  nth($height,1);
-        width:100%;
-        top: 0;
-        left: 0;
     }
 }
 .banner{

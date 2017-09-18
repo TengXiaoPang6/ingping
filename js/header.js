@@ -123,9 +123,9 @@ define(['jquery'],function($){
 		//全部商品分类二级菜单显示及隐藏
 		if($(".nav_ul .totle .menu_second").css("display")=="none"){
 			$(".nav_ul .totle").hover(function(){
-				$(this).find(".menu_second").slideDown(200).end().find(".bg_ul").slideDown(200);
+				$(this).find(".menu_second").slideDown(300).end().find(".bg_ul").slideDown(300);
 			},function(){
-				$(this).find(".menu_second").slideUp(200).end().find(".bg_ul").slideUp(200);
+				$(this).find(".menu_second").slideUp(300).end().find(".bg_ul").slideUp(300);
 			})			
 		}
 		//全部商品分类三级菜单显示及隐藏

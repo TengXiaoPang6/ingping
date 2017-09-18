@@ -1,0 +1,140 @@
+@import 'common';
+$margin:0 auto;
+$width:1200px;
+$height:120px,580px,180px;
+$position: ((wechat,0),(zhi,-58px),(qq,-87px),(xin,-116px));
+.header_bg{
+    height: nth($height,1);
+    background: #f9f9f9;
+    .header{
+        height: nth($height,1);
+        width: $width;
+        margin: $margin;
+        h1{
+           height: nth($height,1);
+           padding-top: 14px; 
+           margin: 0;
+        }
+        ul{
+            overflow: hidden;
+            margin: 75px 50px 0 0;
+        }
+    }
+}
+.main_bg{
+    height: nth($height,2);
+    background: url(../img/big_ng.jpg) no-repeat center;
+    .main{
+        position: relative;
+        width: $width;
+        margin: $margin;
+        height: nth($height,2);
+        .form{
+            width: 443px;
+            height: 478px;
+            position: absolute;
+            top: 56px;
+            right: 0;
+            >p{
+                color: white;
+                font-weight: 600;
+                font-size: 20px;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .login{
+                width: 443px;
+                height: 435px;
+                background: white;
+                @include css3("box-shadow",0 0 9px rgba(0,0,0,.6));
+                padding: 24px 43px;
+                p{
+                    font-size: 17px;
+                }
+                .text{
+                    border: 1px solid lightgray;
+                    width: 354px;
+                    height: 46px;
+                    @include css3("border-radius",5px);
+                    font-size: 14px;
+                    padding-left: 10px;
+                    margin-bottom: 20px;
+                }
+                span{
+                    display: inline-block;
+                    margin-top: 3px;
+                }
+                a{
+                    display: block;
+                }
+                a:hover{
+                    color: black;
+                }
+                .bt{
+                    width: 354px;
+                    height: 44px;
+                    text-align: center;
+                    line-height: 44px;
+                    color: white;
+                    font-size: 14px;
+                    @include css3("border-radius",5px);
+                    margin-top: 20px;
+                }
+                .bt:hover{
+                    color: white;
+                }
+                .bor{
+                    border: 1px solid lightgray;
+                    color: #666;
+                }
+                .bor:hover{
+                    color: #333;
+                }
+                ul{
+                    overflow: hidden;
+                    margin-top: 20px;
+                    li{
+                        width: 30px;
+                        height: 24px;
+                        margin-left: 7px;
+                        background: url(../img/login_bg.png) no-repeat 0 0;
+                        cursor: pointer;
+                    }
+                    .t{
+                        width: auto;
+                        background: none;
+                        line-height: 24px;
+                        cursor: auto;
+                    }
+                    @each $name,$top in $position{
+                        .#{$name}{
+                            background-position-y: $top;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.footer_bg{
+    height: nth($height,3);
+    background:#f9f9f9 ;
+    .footer{
+        width: $width;
+        margin: $margin;
+        height: nth($height,3);
+        padding-top: 32px;
+        p{
+            color: #666;
+            text-align: center;
+            line-height: 26px;
+            span{
+                display: inline-block;
+                width: 20px;
+            }
+        }
+        a:hover{
+            color: black;
+        }
+    }
+}

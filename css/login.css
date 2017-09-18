@@ -1,0 +1,224 @@
+@charset "UTF-8";
+body, p, h1, h2, h3, h4, h5, h6, ul, dl, dd, td, input, textarea, option {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 12px "微软雅黑";
+  color: #666;
+}
+
+li {
+  list-style: none;
+  float: left;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+  -webkit-transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -ms-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+a:hover {
+  color: #FF6600;
+  text-decoration: none;
+}
+
+img, input {
+  border: 0;
+  vertical-align: top;
+}
+
+a, input {
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, b, strong {
+  font-weight: 100;
+}
+
+i, em {
+  font-style: normal;
+}
+
+.clear {
+  zoom: 1;
+}
+
+.clear:after {
+  content: ".";
+  height: 0;
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.header_bg {
+  height: 120px;
+  background: #f9f9f9;
+}
+.header_bg .header {
+  height: 120px;
+  width: 1200px;
+  margin: 0 auto;
+}
+.header_bg .header h1 {
+  height: 120px;
+  padding-top: 14px;
+  margin: 0;
+}
+.header_bg .header ul {
+  overflow: hidden;
+  margin: 75px 50px 0 0;
+}
+
+.main_bg {
+  height: 580px;
+  background: url(../img/big_ng.jpg) no-repeat center;
+}
+.main_bg .main {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  height: 580px;
+}
+.main_bg .main .form {
+  width: 443px;
+  height: 478px;
+  position: absolute;
+  top: 56px;
+  right: 0;
+}
+.main_bg .main .form > p {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.main_bg .main .form .login {
+  width: 443px;
+  height: 435px;
+  background: white;
+  -webkit-box-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
+  -ms-box-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
+  padding: 24px 43px;
+}
+.main_bg .main .form .login p {
+  font-size: 17px;
+}
+.main_bg .main .form .login .text {
+  border: 1px solid lightgray;
+  width: 354px;
+  height: 46px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.main_bg .main .form .login span {
+  display: inline-block;
+  margin-top: 3px;
+}
+.main_bg .main .form .login a {
+  display: block;
+}
+.main_bg .main .form .login a:hover {
+  color: black;
+}
+.main_bg .main .form .login .bt {
+  width: 354px;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  color: white;
+  font-size: 14px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.main_bg .main .form .login .bt:hover {
+  color: white;
+}
+.main_bg .main .form .login .bor {
+  border: 1px solid lightgray;
+  color: #666;
+}
+.main_bg .main .form .login .bor:hover {
+  color: #333;
+}
+.main_bg .main .form .login ul {
+  overflow: hidden;
+  margin-top: 20px;
+}
+.main_bg .main .form .login ul li {
+  width: 30px;
+  height: 24px;
+  margin-left: 7px;
+  background: url(../img/login_bg.png) no-repeat 0 0;
+  cursor: pointer;
+}
+.main_bg .main .form .login ul .t {
+  width: auto;
+  background: none;
+  line-height: 24px;
+  cursor: auto;
+}
+.main_bg .main .form .login ul .wechat {
+  background-position-y: 0;
+}
+.main_bg .main .form .login ul .zhi {
+  background-position-y: -58px;
+}
+.main_bg .main .form .login ul .qq {
+  background-position-y: -87px;
+}
+.main_bg .main .form .login ul .xin {
+  background-position-y: -116px;
+}
+
+.footer_bg {
+  height: 180px;
+  background: #f9f9f9;
+}
+.footer_bg .footer {
+  width: 1200px;
+  margin: 0 auto;
+  height: 180px;
+  padding-top: 32px;
+}
+.footer_bg .footer p {
+  color: #666;
+  text-align: center;
+  line-height: 26px;
+}
+.footer_bg .footer p span {
+  display: inline-block;
+  width: 20px;
+}
+.footer_bg .footer a:hover {
+  color: black;
+}

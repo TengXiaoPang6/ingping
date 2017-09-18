@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/details.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<script type="text/javascript" src="../js/require.js" data-main="../minjs/details.min.js"></script>
+		<script type="text/javascript" src="../minjs/jquery.min.js" ></script>
+	</head>
+	<body>
+		<div class="header_con"></div>
+		<script>
+			$.ajax({
+				type:"get",
+				async:false,
+				url:"header.html",
+				success:function(data){
+					$(".header_con").append(data);
+				}
+			})
+		</script>
+		<div class="details">
+			<div class="position">
+				<a href="">首页</a><span> ＞ </span><a href="">键盘</a><span> ＞ </span>
+				<a href="">MIDIMAN</a><span> ＞ </span><a href="">MIDIMAN键盘</a><span> ＞ </span>
+				<p>MIDIMAN Key 88</p>
+			</div>
+			<div class="magnifying">
+				<ul class="big">
+					<li class="active"><img src="../img/magnifying_big_1.jpg"/></li>
+					<li><img src="../img/magnifying_big_2.jpg"/></li>
+					<li><img src="../img/magnifying_big_3.jpg"/></li>
+					<div class="bg"></div>
+				</ul>
+				<div class="thumbnail">
+					<span class="fl">〈</span>
+					<ul class="small fl">
+						<li class="active"><img src="../img/magnifying_1.jpg"/></li>
+						<li><img src="../img/magnifying_2.jpg"/></li>
+						<li><img src="../img/magnifying_3.jpg"/></li>
+						<li><img src="../img/magnifying_2.jpg"/></li>
+						<li><img src="../img/magnifying_2.jpg"/></li>
+					</ul>
+					<span class="fr">〉</span>
+				</div>
+				<div class="bigbig"></div>
+			</div>
+		</div>
+	</body>
+</html>
