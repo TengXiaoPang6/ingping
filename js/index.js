@@ -1,7 +1,6 @@
 require(["config.min"],function(){
 	require(["jquery","header","footer","aside"],function($){
 		$(function(){
-			var i=-1;
 			//左侧导航栏
 			$(".left_nav").css("left",($(window).width()-1200)/2-32);
 			$(window).resize(function(){

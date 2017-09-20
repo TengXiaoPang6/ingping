@@ -1,3 +1,4 @@
+@import 'common';
 $width:30px;
 $margin:0 auto;
 $color:#FF6600;
@@ -11,7 +12,7 @@ $position:((user_info,8px),(kefu,-165px),(property,-48px));
     background: #333;
     z-index: 1000;
     .shopping{
-        width: $width;
+        width: 30px;
         height: 320px;
         position: absolute;
         left: 0;
@@ -36,6 +37,7 @@ $position:((user_info,8px),(kefu,-165px),(property,-48px));
                     top: 0;
                     left: 0;
                     @include opacity(0);
+                    @include css3("transition",all ease .5s);
                 }
                 .phone_number{
                     width:231px;
@@ -268,6 +270,7 @@ $position:((user_info,8px),(kefu,-165px),(property,-48px));
                     top: 0;
                     left: 0px;
                     @include opacity(0);
+                    @include css3("transition",all ease .5s);
                 }
             }    
             .ma{

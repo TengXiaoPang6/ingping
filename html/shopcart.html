@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的购物车</title>
+		<link rel="stylesheet" type="text/css" href="../css/shopcart.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<script type="text/javascript" src="../minjs/jquery.min.js" ></script>
+		<script type="text/javascript" src="../js/require.js" data-main="../minjs/shopcart.min.js"></script>
+	</head>
+	<body>
+		<div class="header_con"></div>
+		<script>
+			$.ajax({
+				type:"get",
+				async:false,
+				url:"header.html",
+				success:function(data){
+					$(".header_con").append(data);
+				}
+			})
+		</script>
+		<div class="right_nav"></div>
+		<script>
+			$.ajax({
+				type:"get",
+				async:false,
+				url:"aside.html",
+				success:function(data){
+					$(".right_nav").append(data);
+				}
+			})
+		</script>
+		<div class="tab">
+			<div class="tip">
+				<p class="fl"><span class="glyphicon glyphicon-shopping-cart"></span> 我的购物车共<i>0</i>件商品</p>				
+				<img src="../img/liu.png" class="fr"/>
+			</div>
+			<table class="table table-hover">
+				<tr>
+					<th>商品信息</th>
+					<th>单价（元）</th>
+					<th>数量</th>
+					<th>金额（元）</th>
+					<th>操作</th>
+				</tr>
+				<tr>
+					<td class="img">
+						<img src="../img/1F_1.png" />
+						<div class="info fl">
+							<p class="name"><a href="">asfsdfadsfasdfasd</a></p>
+							<p class="specification">sdfasdfa</p>
+						</div>
+					</td>
+					<td class="price">¥190.00</td>
+					<td class="count">
+						<div class="input-group">
+							<div class="input-group-addon">-</div>
+							<input class="form-control" type="text" value="1" disabled="disabled"/>
+							<div class="input-group-addon">+</div>
+						</div>
+					</td>
+					<td class="totle">¥190.00</td>
+					<td class="remove">
+						<p><a href=""><span class="glyphicon glyphicon-heart"></span> 收藏</a></p>
+						<p><a href=""><span class="glyphicon glyphicon-trash"></span> 删除</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td class="img">
+						<img src="../img/1F_1.png" />
+						<div class="info fl">
+							<p class="name"><a href="">asfsdfadsfasdfasd</a></p>
+							<p class="specification">sdfasdfa</p>
+						</div>
+					</td>
+					<td class="price">¥190.00</td>
+					<td class="count">
+						<div class="input-group">
+							<div class="input-group-addon">-</div>
+							<input class="form-control" type="text" value="1" disabled="disabled"/>
+							<div class="input-group-addon">+</div>
+						</div>
+					</td>
+					<td class="totle">¥190.00</td>
+					<td class="remove">
+						<p><a href=""><span class="glyphicon glyphicon-heart"></span> 收藏</a></p>
+						<p><a href=""><span class="glyphicon glyphicon-trash"></span> 删除</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td class="img">
+						<img src="../img/1F_1.png" />
+						<div class="info fl">
+							<p class="name"><a href="">asfsdfadsfasdfasd</a></p>
+							<p class="specification">sdfasdfa</p>
+						</div>
+					</td>
+					<td class="price">¥190.00</td>
+					<td class="count">
+						<div class="input-group">
+							<div class="input-group-addon">-</div>
+							<input class="form-control" type="text" value="1" disabled="disabled"/>
+							<div class="input-group-addon">+</div>
+						</div>
+					</td>
+					<td class="totle">¥190.00</td>
+					<td class="remove">
+						<p><a href=""><span class="glyphicon glyphicon-heart"></span> 收藏</a></p>
+						<p><a href=""><span class="glyphicon glyphicon-trash"></span> 删除</a></p>
+					</td>
+				</tr>
+			</table>
+			<div class="pay">
+				<p class="fl"><a href=""><span class="glyphicon glyphicon-trash"></span> 清空购物车</a></p>
+				<p class="fr">
+					总共<span>0</span>件，订单金额（不含运费）：<sub>¥</sub><i>1213</i>
+					<a href="">去结算</a>
+				</p>
+			</div>
+		</div>
+		<div class="footer_con"></div>
+	</body>
+</html>

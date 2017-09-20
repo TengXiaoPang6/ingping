@@ -1,0 +1,120 @@
+@import 'common';
+@import 'header';
+@import 'footer';
+@import 'aside';
+$width:1000px;
+$margin:0 auto;
+.footer_bg .footer .nav_ul .totle .menu_second{
+    display: none;
+}
+.footer_bg .footer .nav_ul .totle .bg_ul{
+    display: none;
+}
+.header_con{
+    @include css3("box-shadow",0 3px 5px rgba(0,0,0,0.2))
+}
+.tab{
+    width: $width;
+    margin: $margin;
+    .tip{
+        height: 100px;
+        line-height: 100px;
+        font-size: 16px;
+        span{
+            color: nth($color,1);
+        }
+        img{
+            margin-top: 32px;
+        }
+    }
+    table{
+        tr{
+            th{
+                text-align: center;
+                font-size: 14px;
+            }
+            td{
+                padding: 20px 0 !important;
+                vertical-align: middle !important;
+                text-align: center;
+            }
+            .img{
+                padding-left: 20px !important;
+                width: 520px;
+                text-align: left;
+                img{
+                    width: 80px;
+                    height: 80px;
+                    float: left;
+                }
+                .info{
+                    height: 80px;
+                    width: 400px;
+                    padding-left: 20px;
+                    .name{
+                        font-size: 14px;
+                    }
+                    .specification{
+                        color: #999;
+                        margin-top: 15px;
+                    }
+                }
+            }
+            .price{
+                font-size: 16px;
+                font-weight: 600;
+            }
+            .count{
+                width: 100px;
+                .input-group-addon{
+                    cursor: pointer;
+                    background: #FBFBFB;
+                }
+                input{
+                    background: white;
+                }
+            }
+            .totle{
+                 font-size: 16px;
+                font-weight: 600;
+                color: nth($color,1);
+                
+            }
+            .remove{
+                p{
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+    .pay{
+        height: 60px;
+        line-height: 60px;
+        padding-left: 35px;
+        font-size: 14px;
+        background: #F5F5F5;
+        .fr{
+            height: 60px;
+            span,sub,i{
+                color: nth($color,1);
+            }
+            i,sub{
+                font-size: 30px;
+            }
+            a{
+                width: 100px;
+                height: 60px;
+                display: inline-block;
+                text-align: center;
+                color: white;
+                background: nth($color,1);
+                font-weight: 600;
+                margin-left: 30px;
+                vertical-align: top;
+            }
+        }
+    }
+}
+.footer_con{
+    margin-top: 50px;
+}

@@ -1,5 +1,5 @@
 requirejs.config({
-	baseUrl: "http://localhost:8080/minjs",
+	baseUrl: "http://localhost:8888/minjs",
 	paths:{
 		"jquery":"jquery.min",
 		"header":"header.min",

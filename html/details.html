@@ -9,7 +9,46 @@
 		<script type="text/javascript" src="../minjs/jquery.min.js" ></script>
 	</head>
 	<body>
+		<script type="text/html" id="tem">
+			<% for(var i=0;i<data.length;i++){ %>
+				<dl>
+					<dd>
+						<p><%= data[i].userName%></p>
+						<div>
+							<span class="glyphicon glyphicon-star active"></span>
+							<span class="glyphicon glyphicon-star active"></span>
+							<span class="glyphicon glyphicon-star active"></span>
+							<span class="glyphicon glyphicon-star active"></span>
+							<span class="glyphicon glyphicon-star active"></span>
+						</div>
+						<span><%= data[i].createDate%></span>
+					</dd>
+					<dt>
+						<p><%=data[i].content%></p>
+						<span><%= data[i].userName%>的评价</span>
+					</dt>
+				</dl>
+			<% } %>
+		</script>
+		<script type="text/html" id="question">
+			<% for(var i=0;i<data.length;i++){ %>
+				<dl>
+					<dd>
+						<span></span>
+						<p class="name fl"><%= data[i].userName%></p>
+						<p class="date fr"><%= data[i].createDate%></p>
+						<p class="text"><%= data[i].content%></p>
+					</dd>
+					<dt>
+						<span></span>
+						<p class="name fl">音平客服回复：</p>
+						<p class="text"><%= data[i].replyContent%></p>
+					</dt>
+				</dl>
+			<% }%>
+		</script>
 		<div class="header_con"></div>
+		<div class="aside_con"></div>
 		<script>
 			$.ajax({
 				type:"get",
@@ -20,32 +59,208 @@
 				}
 			})
 		</script>
+		<script>
+			$.ajax({
+				type:"get",
+				async:false,
+				url:"aside.html",
+				success:function(data){
+					$(".header_con").append(data);
+				}
+			})
+		</script>
 		<div class="details">
 			<div class="position">
-				<a href="">首页</a><span> ＞ </span><a href="">键盘</a><span> ＞ </span>
-				<a href="">MIDIMAN</a><span> ＞ </span><a href="">MIDIMAN键盘</a><span> ＞ </span>
-				<p>MIDIMAN Key 88</p>
+				<a href="">首页</a><span> ＞ </span>
 			</div>
-			<div class="magnifying">
+			<div class="magnifying fl">
 				<ul class="big">
-					<li class="active"><img src="../img/magnifying_big_1.jpg"/></li>
-					<li><img src="../img/magnifying_big_2.jpg"/></li>
-					<li><img src="../img/magnifying_big_3.jpg"/></li>
 					<div class="bg"></div>
+					<div class="loading">
+						<img src="../img/loading.gif" />  loading……
+					</div>
 				</ul>
 				<div class="thumbnail">
 					<span class="fl">〈</span>
 					<ul class="small fl">
-						<li class="active"><img src="../img/magnifying_1.jpg"/></li>
-						<li><img src="../img/magnifying_2.jpg"/></li>
-						<li><img src="../img/magnifying_3.jpg"/></li>
-						<li><img src="../img/magnifying_2.jpg"/></li>
-						<li><img src="../img/magnifying_2.jpg"/></li>
 					</ul>
 					<span class="fr">〉</span>
 				</div>
 				<div class="bigbig"></div>
+				<div class="share">
+					<p class="fl">商品编号:<span></span></p>
+					<a href="" class="xiang"><span class="glyphicon glyphicon-share"></span> 分享</a>
+					<a href="" class="cang"><span class="glyphicon glyphicon-star"></span> 收藏</a>
+				</div>
+			</div>
+			<div class="thing fl">
+				<h3 class="name">欢迎来到音平商城</h3>
+				<p class="guarantee">官方正品 支持7天无理由退换货 保修1年</p>
+				<div class="price">
+					<div class="fl">
+						<p class="money">价 格<span><sub>¥</sub><i>8888</i></span><a href="">降价通知</a></p>
+						<p class="member"><span>会员专享</span><a href="login.html">点击登录，即可查看您的专享优惠>></a></p>						
+					</div>
+					<div class="fr">
+						<p class="good">好评度<span>0%</span></p>
+						<a href=""><span>0</span>人评价</a>
+						<a href=""><span>0</span>人晒单</a>
+					</div>
+				</div>
+				<div class="promotion">
+					<span>促 销</span>
+					<div class="loading">
+						<img src="../img/loading.gif" />  loading……
+					</div>
+					<ul>
+					</ul>
+				</div>
+				<div class="delivery">
+					<span>配 送</span>
+					<ul>
+						<li>现货，21:00前完成下单当天发货，预计1-3天到达</li>
+						<li>现在下单，立享满99元包邮<a href="">运费说明</a></li>
+					</ul>
+				</div>
+				<div class="buy">
+					<div class="count fl">
+						<div class="num fl">1</div>
+						<div class="plus fl">
+							<span>+</span>
+							<span>-</span>
+						</div>
+					</div>
+					<a class="now_buy fl">立即购买</a>
+					<a class="tocart fl">加入购物车</a>
+					<a class="usemoblie fl">用手机购买</a>
+				</div>
+				<div class="pay">
+					<span>支 付</span>
+					<ul>
+						<li><a href="">支付宝</a></li>
+						<li><a href="">微信支付</a></li>
+						<li><a href="">财付通</a></li>
+						<li><a href="">银行卡支付</a></li>
+						<li><a href="">货到付款</a></li>
+						<li><a href="">分期付款</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
+		<div class="comment">
+			<div class="guide fl">
+				<a href="" class="kufu">专业客服导购</a>
+				<dl>
+					<dd>精选活动专场</dd>
+					<dt>
+						<ul>
+							<li><a href=""><span class="glyphicon glyphicon-expand"> </span> 网络主播专场 <span> ›</span></a></li>
+							<li><a href=""><span class="glyphicon glyphicon-signal"> </span> 录音编曲专场 <span> ›</span></a></li>
+							<li><a href=""><span class="glyphicon glyphicon-cd"> </span> 家庭KTV专场 <span> ›</span></a></li>
+							<li><a href=""><span class="glyphicon glyphicon-phone"> </span> 手机直播专场 <span> ›</span></a></li>
+							<li><a href=""><span class="glyphicon glyphicon-music"> </span> 爆款吉他专场 <span> ›</span></a></li>
+							<li><a href=""><span class="glyphicon glyphicon-sd-video"> </span> 商用直播专场 <span> ›</span></a></li>
+							<li><a href=""><span class="glyphicon glyphicon-blackboard"> </span> 演出音响专场 <span> ›</span></a></li>
+							<li><a href=""><span class="glyphicon glyphicon-headphones"> </span> 音乐欣赏专场 <span> ›</span></a></li>
+							<li><a href=""><span class="glyphicon glyphicon-list-alt"> </span> 会议工程专场 <span> ›</span></a></li>
+							<li><a href=""><span class="glyphicon glyphicon-facetime-video"> </span> 家庭影院专场 <span> ›</span></a></li>
+							<li><a href=""><span class="glyphicon glyphicon-film"> </span> 影视录音专场 <span> ›</span></a></li>
+						</ul>
+					</dt>
+				</dl>
+			</div>
+			<div class="details_img fl">
+				<div class="nav">
+					<ul class="fl">
+						<li class="active">商品详情
+						</li>
+						<li>包装参数</li>
+						<li>评论晒单<span>(0)</span></li>
+						<li>商品咨询<span>(0)</span></li>
+						<li>正品保障</li>
+					</ul>
+					<div class="pri fr">
+						<p class="fl"><sub>¥ </sub><span>8888</span></p>
+						<div class="tocart fl">加入购物车</div>
+					</div>
+				</div>
+				<div class="content">
+					<div class="active">
+						<div class="text">
+							<ul>
+							</ul>
+							<img src="../img/act_1.jpg" />
+						</div>
+						<div class="photo">
+							<div class="title">商品详情展示</div>
+							<div class="loading">
+								<img src="../img/loading.gif" />  loading……
+							</div>
+							<div class="im fl"></div>
+							<!--<img src="../img/zhengpin.jpg" />-->
+						</div>
+					</div>
+					<div></div>
+					<div>
+						<img src="../img/act_2.jpg"/>
+						<div class="pinglun">
+							<p>商品评价</p>
+							<div class="overall">
+								<div class="num fl">
+									<div class="totle fl">
+										<p class="ti">好评度</p>
+										<p class="bai"><span>0</span>%</p>
+										<p class="cou"><span>0</span>人评价</p>
+									</div>
+									<div class="pro fl">
+										<ul>
+											<li><p class="fl">好评 <span>(0%)</span></p>
+												<div class="fl good"></div>
+												<div class="fl bad"></div>
+											</li>
+											<li><p class="fl">中评 <span>(0%)</span></p>
+												<div class="fl good"></div>
+												<div class="fl bad"></div>
+											</li>
+											<li><p class="fl">差评 <span>(0%)</span></p>
+												<div class="fl good"></div>
+												<div class="fl bad"></div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="towrite fr">
+									<p>您可对已购买的商品进行评价</p>
+									<a href="">发评论赚积分</a>
+								</div>
+							</div>
+							<div class="dl">
+								<div class="loading" style="margin-top: 30px;">
+									<img src="../img/loading.gif" />  loading……
+								</div>
+								<div class="more">点击加载更多</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<img src="../img/act_2.jpg"/>
+						<div class="zixun">
+							<div class="hint">
+								<p class="fl">商品咨询</p>
+								<a href="">我要咨询</a>								
+							</div>
+							<div class="dl">
+								<div class="loading" style="margin-top: 30px;">
+									<img src="../img/loading.gif" />  loading……
+								</div>
+								<div class="more">点击加载更多</div>
+							</div>
+						</div>
+					</div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_con"></div>
 	</body>
 </html>

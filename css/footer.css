@@ -1,106 +1,197 @@
-/*
-Error: Undefined mixin 'css3'.
-        on line 79 of ./scss/footer.scss, in `css3'
-        from line 79 of ./scss/footer.scss
+@charset "UTF-8";
+body, p, h1, h2, h3, h4, h5, h6, ul, dl, dd, td, input, textarea, option {
+  margin: 0;
+  padding: 0;
+}
 
-74:             a{
-75:                 display: block;
-76:                 height: 30px;
-77:                 width: 120px;
-78:                 border: 1px solid nth($color,1);
-79:                 @include css3("border-radius",5px);
-80:                 line-height: 30px;
-81:                 text-align: center;
-82:                 color: nth($color,1);
-83:                 margin: 10px 0 0 100px;
-84:             }
+body {
+  font: 12px "微软雅黑";
+  color: #666;
+}
 
-Backtrace:
-./scss/footer.scss:79:in `css3'
-./scss/footer.scss:79
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:98:in `block in with_mixin'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:98:in `with_mixin'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:161:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:20:in `render'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/engine.rb:290:in `render'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:464:in `update_stylesheet'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/plugin.rb:82:in `update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:51:in `process_result'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/exec/base.rb:52:in `parse'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/exec/base.rb:19:in `parse!'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/bin/sass:13:in `<top (required)>'
-C:/Ruby22-x64/bin/sass:23:in `load'
-C:/Ruby22-x64/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'css3'.\A         on line 79 of ./scss/footer.scss, in `css3'\A         from line 79 of ./scss/footer.scss\A \A 74:             a{\A 75:                 display: block;\A 76:                 height: 30px;\A 77:                 width: 120px;\A 78:                 border: 1px solid nth($color,1);\A 79:                 @include css3(\"border-radius\",5px);\A 80:                 line-height: 30px;\A 81:                 text-align: center;\A 82:                 color: nth($color,1);\A 83:                 margin: 10px 0 0 100px;\A 84:             }"; }
+li {
+  list-style: none;
+  float: left;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+  -webkit-transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -ms-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+a:hover {
+  color: #FF6600;
+  text-decoration: none;
+}
+
+img, input {
+  border: 0;
+  vertical-align: top;
+}
+
+a, input {
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, b, strong {
+  font-weight: 100;
+}
+
+i, em {
+  font-style: normal;
+}
+
+.clear {
+  zoom: 1;
+}
+
+.clear:after {
+  content: ".";
+  height: 0;
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.promise_bg {
+  background: #FF6600;
+  height: 65px;
+}
+.promise_bg .promise {
+  height: 65px;
+  width: 1200px;
+  margin: 0 auto;
+}
+.promise_bg .promise ul {
+  height: 65px;
+}
+.promise_bg .promise ul li {
+  width: 232px;
+  height: 65px;
+  margin-right: 10px;
+  line-height: 65px;
+  font-weight: 600;
+  padding: 0 56px;
+}
+.promise_bg .promise ul li span {
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 10px;
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+}
+.promise_bg .promise ul .no_margin {
+  margin-right: 0;
+}
+
+.foot_nav_bg {
+  height: 256px;
+  background: white;
+}
+.foot_nav_bg .foot_nav {
+  height: 256px;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0 0 30px;
+}
+.foot_nav_bg .foot_nav ul {
+  width: 67px;
+  margin-right: 88px;
+}
+.foot_nav_bg .foot_nav ul li {
+  float: none;
+  line-height: 24px;
+  height: 24px;
+}
+.foot_nav_bg .foot_nav ul .tit {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.foot_nav_bg .foot_nav .say {
+  width: 240px;
+  position: relative;
+}
+.foot_nav_bg .foot_nav .say p {
+  font-size: 30px;
+  color: #FF6600;
+  font-weight: 700;
+  position: absolute;
+  top: 90px;
+  left: 40px;
+}
+.foot_nav_bg .foot_nav .say span {
+  display: block;
+  padding-left: 90px;
+}
+.foot_nav_bg .foot_nav .say a {
+  display: block;
+  height: 30px;
+  width: 120px;
+  border: 1px solid #FF6600;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  line-height: 30px;
+  text-align: center;
+  color: #FF6600;
+  margin: 10px 0 0 100px;
+}
+.foot_nav_bg .foot_nav .say a:hover {
+  background: #FF6600;
+  color: white;
+}
+
+.address_bg {
+  height: 198px;
+  background: #333;
+}
+.address_bg .address {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 24px 0 0 0;
+  text-align: center;
+  color: #999;
+}
+.address_bg .address h1 {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 0;
+}
+.address_bg .address p {
+  height: 20px;
+  line-height: 20px;
+}
+.address_bg .address ul {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 530px;
+  padding: 20px 0;
+}
+.address_bg .address ul li {
+  margin-right: 10px;
+}
+.address_bg .address a {
+  color: #999;
+}
+.address_bg .address a:hover {
+  color: #FF6600;
+}
