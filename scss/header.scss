@@ -38,9 +38,10 @@ p,ul{
             white-space: pre-wrap;
         }
         .login{
-            color:nth($color,2);
+            color:#666;
             a{
                 color:nth($color,1);
+                cursor: pointer;
             }
         }
         .ul_aboutme{

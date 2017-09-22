@@ -287,6 +287,9 @@ i, em {
   width: 30px;
   background: url(../img/right_sprit.png) no-repeat 6px -20px;
 }
+.aside .shopping ul .cart a {
+  color: white;
+}
 .aside .shopping ul .cart p {
   padding: 0 8px;
 }

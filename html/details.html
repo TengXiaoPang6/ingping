@@ -13,6 +13,7 @@
 			<% for(var i=0;i<data.length;i++){ %>
 				<dl>
 					<dd>
+						<img src="../img/touxiang.jpg" style="border-radius: 50%;width: 40px;height: 40px;"/>
 						<p><%= data[i].userName%></p>
 						<div>
 							<span class="glyphicon glyphicon-star active"></span>
@@ -130,7 +131,7 @@
 							<span>-</span>
 						</div>
 					</div>
-					<a class="now_buy fl">立即购买</a>
+					<a class="now_buy fl" href="shopcart.html">立即购买</a>
 					<a class="tocart fl">加入购物车</a>
 					<a class="usemoblie fl">用手机购买</a>
 				</div>
@@ -259,6 +260,14 @@
 					</div>
 					<div></div>
 				</div>
+			</div>
+		</div>
+		<div class="add_success">
+			<img src="../img/addsuccess.png" class="fl"/>
+			<span>&times;</span>
+			<div class="fl">
+				<p>成功加入购物车</p>
+				<span>购物车保留时间有限，建议您尽快结算！</span>
 			</div>
 		</div>
 		<div class="footer_con"></div>

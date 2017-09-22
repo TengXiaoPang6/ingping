@@ -105,10 +105,11 @@ p, ul {
   white-space: pre-wrap;
 }
 .header_bg .header .login {
-  color: #DDDEE5;
+  color: #666;
 }
 .header_bg .header .login a {
   color: #FF6600;
+  cursor: pointer;
 }
 .header_bg .header .ul_aboutme {
   height: 33px;

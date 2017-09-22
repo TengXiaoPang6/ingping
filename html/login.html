@@ -5,6 +5,7 @@
 		<title>音平账号-登录</title>
 		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<script type="text/javascript" src="../js/require.js" data-main="../minjs/login.min.js"></script>
 	</head>
 	<body>
 		<div class="header_bg">
@@ -43,18 +44,21 @@
 						<p>密码登录</p>
 						<input type="text" class="text" placeholder="手机号/用户名/邮箱"/>
 						<input type="password" class="text" placeholder="密码"/>
-						<input type="checkbox" checked="checked"/><span> 记住用户名</span>
+						<input type="checkbox" checked="checked"/><span> 记住用户名和密码</span>
 						<a href="" class="fr">忘记密码？</a>
-						<a href="" class="bt btn-danger">立即登录</a>
+						<a class="bt btn-danger">立即登录</a>
 						<a href="signin.html" class="bt bor btn-default">注册音平账号</a>
 						<ul class="fr">
 							<li class="t">合作伙伴账号登录：</li>
-							<li class="wechat"><a href=""></a></li>
-							<li class="zhi"><a href=""></a></li>
-							<li class="qq"><a href=""></a></li>
-							<li class="xin"><a href=""></a></li>
+							<li class="wechat"><a href="https://open.weixin.qq.com/connect/qrconnect?appid=wxd76b0d2bb0ff8e3f&redirect_uri=https%3A%2F%2Fpassport.ingping.com%2FquickLogin%2Fsuccess&state=37e37504-dc49-453a-9f1a-a57751fc3773&response_type=code&scope=snsapi_login#wechat_redirect"></a></li>
+							<li class="zhi"><a href="https://auth.alipay.com/login/express.htm?goto=https%3A%2F%2Fmemberexprod.alipay.com%3A443%2Fauthorize%2FuserAuthQuickLoginAction.htm%3Fe_i_i_d%3D140f3448702b6f692a559ee8e1c8669e"></a></li>
+							<li class="qq"><a href="https://graph.qq.com/oauth/show?which=Login&display=pc&client_id=219793&redirect_uri=https://passport.ingping.com/quickLogin/success&response_type=code&state=365a7458213cc09be00880bd3eec9280&scope=get_user_info"></a></li>
+							<li class="xin"><a href="https://api.weibo.com/oauth2/authorize?client_id=1704172239&redirect_uri=https://passport.ingping.com/quickLogin/success&response_type=code"></a></li>
 						</ul>
 					</div>
+				</div>
+				<div class="success">
+					<span class="glyphicon glyphicon-ok"></span> 注册成功，正在为您跳转……
 				</div>
 			</div>
 		</div>

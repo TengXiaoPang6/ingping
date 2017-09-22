@@ -1,6 +1,16 @@
 require(["config.min"],function(){
-	require(["jquery","header","footer","aside"],function($){
+	require(["jquery","header","footer","aside"],function($,cookie){
 		$(function(){
+			//获取cookie
+			var order=cookie.get("order");
+			var order_length;
+			if(order&&order!="[]"){
+				order_length=JSON.parse(order).length; 
+			}else{
+				order_length=0;
+			}
+			$(".header .ul_aboutme li .count").text(order_length);
+			$(".aside .shopping .cart span").text(order_length);
 			//左侧导航栏
 			$(".left_nav").css("left",($(window).width()-1200)/2-32);
 			$(window).resize(function(){

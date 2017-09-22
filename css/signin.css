@@ -95,6 +95,33 @@ i, em {
   margin: 0 auto;
   height: 580px;
 }
+.main_bg .main .success {
+  width: 250px;
+  height: 80px;
+  background: white;
+  position: absolute;
+  top: 250px;
+  left: 450px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  line-height: 60px;
+  font-size: 14px;
+  display: none;
+  text-align: center;
+}
+.main_bg .main .success span {
+  color: green;
+  font-size: 20px;
+}
 .main_bg .main .form {
   width: 443px;
   height: 478px;
@@ -134,7 +161,6 @@ i, em {
   border-radius: 5px;
   font-size: 14px;
   padding-left: 10px;
-  margin-bottom: 20px;
 }
 .main_bg .main .form .sign .btn {
   position: absolute;
@@ -143,6 +169,7 @@ i, em {
   height: 44px;
   border-top: none;
   border-bottom: none;
+  width: 126px;
 }
 .main_bg .main .form .sign span {
   display: inline-block;
@@ -150,6 +177,12 @@ i, em {
 }
 .main_bg .main .form .sign span a {
   display: inline;
+}
+.main_bg .main .form .sign .help-block {
+  display: block;
+  margin-bottom: 5px !important;
+  padding-left: 10px;
+  visibility: hidden;
 }
 .main_bg .main .form .sign a {
   display: block;
@@ -169,7 +202,8 @@ i, em {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 .main_bg .main .form .sign .bt:hover {
   color: white;

@@ -29,6 +29,25 @@ $position: ((wechat,0),(zhi,-58px),(qq,-87px),(xin,-116px));
         width: $width;
         margin: $margin;
         height: nth($height,2);
+        .success{
+            width: 250px;
+            height: 80px;
+            background: white;
+            position: absolute;
+            top: 250px;
+            left:450px;
+            @include css3("box-shadow",0 0 4px rgba(0,0,0,.3));
+            @include css3("border-radius",5px);
+            padding: 10px 20px;
+            line-height: 60px;
+            font-size: 14px;
+            display: none;
+            text-align: center;
+            span{
+                color: green;
+                font-size: 20px;
+            }
+        }
         .form{
             width: 443px;
             height: 478px;
@@ -58,7 +77,6 @@ $position: ((wechat,0),(zhi,-58px),(qq,-87px),(xin,-116px));
                     @include css3("border-radius",5px);
                     font-size: 14px;
                     padding-left: 10px;
-                    margin-bottom: 20px;
                 }
                 .btn{
                     position: absolute;
@@ -67,6 +85,7 @@ $position: ((wechat,0),(zhi,-58px),(qq,-87px),(xin,-116px));
                     height: 44px;
                     border-top: none;
                     border-bottom: none;
+                    width: 126px;
                 }
                 span{
                     display: inline-block;
@@ -74,6 +93,12 @@ $position: ((wechat,0),(zhi,-58px),(qq,-87px),(xin,-116px));
                     a{
                         display: inline;
                     }
+                }
+                .help-block{
+                    display: block;
+                    margin-bottom: 5px !important;
+                    padding-left: 10px;
+                    visibility: hidden;
                 }
                 a{
                     display: block;
@@ -89,7 +114,8 @@ $position: ((wechat,0),(zhi,-58px),(qq,-87px),(xin,-116px));
                     color: white;
                     font-size: 14px;
                     @include css3("border-radius",5px);
-                    margin-top: 20px;
+                    margin-top: 10px;
+                    cursor: pointer;
                 }
                 .bt:hover{
                     color: white;

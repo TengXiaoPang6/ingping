@@ -484,6 +484,9 @@ i, em {
   width: 30px;
   background: url(../img/right_sprit.png) no-repeat 6px -20px;
 }
+.aside .shopping ul .cart a {
+  color: white;
+}
 .aside .shopping ul .cart p {
   padding: 0 8px;
 }
@@ -720,10 +723,11 @@ p, ul {
   white-space: pre-wrap;
 }
 .header_bg .header .login {
-  color: #DDDEE5;
+  color: #666;
 }
 .header_bg .header .login a {
   color: #FF6600;
+  cursor: pointer;
 }
 .header_bg .header .ul_aboutme {
   height: 33px;
@@ -1472,6 +1476,8 @@ p, ul {
 }
 .details .thing .buy {
   height: 50px;
+  display: none;
+  -webkit-user-select: none;
 }
 .details .thing .buy .count {
   height: 50px;
@@ -1800,6 +1806,7 @@ p, ul {
 .comment .details_img .content .pinglun dl dd {
   width: 140px;
   float: left;
+  text-align: center;
 }
 .comment .details_img .content .pinglun dl dd .active {
   color: #FF6600;
@@ -1903,6 +1910,43 @@ p, ul {
   clear: both;
   width: 800px;
   padding-left: 31px;
+}
+
+.add_success {
+  width: 400px;
+  padding: 25px;
+  height: 90px;
+  position: fixed;
+  right: -370px;
+  background: white;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all ease-out 0.8s;
+  -moz-transition: all ease-out 0.8s;
+  -ms-transition: all ease-out 0.8s;
+  -o-transition: all ease-out 0.8s;
+  transition: all ease-out 0.8s;
+}
+.add_success > span {
+  color: #999;
+  font-size: 24px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+.add_success div {
+  padding-left: 20px;
+}
+.add_success div p {
+  font-size: 14px;
+  color: #FF6600;
+}
+.add_success div span {
+  color: #999;
 }
 
 .loading {

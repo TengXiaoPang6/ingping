@@ -172,10 +172,11 @@ p, ul {
   white-space: pre-wrap;
 }
 .header_bg .header .login {
-  color: #DDDEE5;
+  color: #666;
 }
 .header_bg .header .login a {
   color: #FF6600;
+  cursor: pointer;
 }
 .header_bg .header .ul_aboutme {
   height: 33px;
@@ -1159,6 +1160,9 @@ i, em {
   width: 30px;
   background: url(../img/right_sprit.png) no-repeat 6px -20px;
 }
+.aside .shopping ul .cart a {
+  color: white;
+}
 .aside .shopping ul .cart p {
   padding: 0 8px;
 }
@@ -1352,6 +1356,7 @@ i, em {
   margin-top: 15px;
 }
 .tab table tr .price {
+  width: 150px;
   font-size: 16px;
   font-weight: 600;
 }
@@ -1361,17 +1366,33 @@ i, em {
 .tab table tr .count .input-group-addon {
   cursor: pointer;
   background: #FBFBFB;
+  -webkit-user-select: none;
 }
 .tab table tr .count input {
+  text-align: center;
   background: white;
+  padding: 6px 0;
 }
 .tab table tr .totle {
+  width: 150px;
   font-size: 16px;
   font-weight: 600;
   color: #FF6600;
 }
+.tab table tr .remove {
+  width: 80px;
+}
 .tab table tr .remove p {
   margin: 5px 0;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+.tab table tr .remove p:hover {
+  color: #FF6600;
+}
+.tab table tr .remove .active {
+  color: #FF6600;
 }
 .tab .pay {
   height: 60px;
@@ -1399,6 +1420,29 @@ i, em {
   font-weight: 600;
   margin-left: 30px;
   vertical-align: top;
+}
+.tab .p {
+  text-align: center;
+  margin-top: 30px;
+}
+.tab .p img {
+  margin-bottom: 20px;
+}
+.tab .no_order {
+  height: 260px;
+  padding: 109px 0 0 345px;
+}
+.tab .no_order .fl {
+  height: 42px;
+}
+.tab .no_order .fl p {
+  padding-left: 10px;
+  line-height: 21px;
+  line-height: 21px;
+  font-size: 14px;
+}
+.tab .no_order .fl p a {
+  color: #FF6600;
 }
 
 .footer_con {

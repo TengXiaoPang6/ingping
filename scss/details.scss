@@ -236,6 +236,8 @@ $height:646px;
         }
         .buy{
             height: 50px;
+            display: none;
+            -webkit-user-select: none;
             .count{
                 height: 50px;
                 width: 46px;
@@ -554,6 +556,7 @@ $height:646px;
                     dd{
                         width: 140px;
                         float: left;
+                        text-align: center;
                         .active{
                             color: nth($color,1);
                             display: inline;
@@ -660,6 +663,34 @@ $height:646px;
                     }
                 }
             }
+        }
+    }
+}
+.add_success{
+    width: 400px;
+    padding: 25px;
+    height: 90px;
+    position: fixed;
+    right:-370px;
+    background: white;
+    @include css3("box-shadow",0 0 4px rgba(0,0,0,.2));
+    @include css3("transition",all ease-out .8s);
+    >span{
+        color: #999;
+        font-size: 24px;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+    }
+    div{
+        padding-left: 20px;
+        p{
+            font-size: 14px;
+            color: nth($color,1);
+        }
+        span{
+            color: #999;
         }
     }
 }

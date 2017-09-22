@@ -29,6 +29,25 @@ $position: ((wechat,0),(zhi,-58px),(qq,-87px),(xin,-116px));
         width: $width;
         margin: $margin;
         height: nth($height,2);
+        .success{
+            width: 250px;
+            height: 80px;
+            background: white;
+            position: absolute;
+            top: 250px;
+            left:450px;
+            text-align: center;
+            @include css3("box-shadow",0 0 4px rgba(0,0,0,.3));
+            @include css3("border-radius",5px);
+            padding: 10px 20px;
+            line-height: 60px;
+            font-size: 14px;
+            display: none;
+            span{
+                color: green;
+                font-size: 20px;
+            }
+        }
         .form{
             width: 443px;
             height: 478px;
@@ -79,6 +98,7 @@ $position: ((wechat,0),(zhi,-58px),(qq,-87px),(xin,-116px));
                     font-size: 14px;
                     @include css3("border-radius",5px);
                     margin-top: 20px;
+                    cursor: pointer;
                 }
                 .bt:hover{
                     color: white;
@@ -99,6 +119,11 @@ $position: ((wechat,0),(zhi,-58px),(qq,-87px),(xin,-116px));
                         margin-left: 7px;
                         background: url(../img/login_bg.png) no-repeat 0 0;
                         cursor: pointer;
+                        a{
+                            display: block;
+                            height: 100%;
+                            width:100%;
+                        }
                     }
                     .t{
                         width: auto;

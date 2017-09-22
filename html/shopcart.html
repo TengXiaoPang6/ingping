@@ -9,6 +9,33 @@
 		<script type="text/javascript" src="../js/require.js" data-main="../minjs/shopcart.min.js"></script>
 	</head>
 	<body>
+		<script type="text/html" id="goods">
+			<% for(var i=0;i<data.length;i++){ %>
+				<tr>
+					<td class="img">
+						<img src="<%= data[i][0]%>" />
+						<div class="info fl">
+							<p class="name"><a href="details.html?id=<%= data[i][5]%>" target="_blank">
+								<%= data[i][1]%></a></p>
+							<p class="specification"><%= data[i][2]%></p>
+						</div>
+					</td>
+					<td class="price">¥<%= data[i][3]%></td>
+					<td class="count">
+						<div class="input-group">
+							<div class="input-group-addon">-</div>
+							<input class="form-control" type="text" value="<%= data[i][4]%>" disabled="disabled"/>
+							<div class="input-group-addon">+</div>
+						</div>
+					</td>
+					<td class="totle">¥<%= data[i][3]*data[i][4]%></td>
+					<td class="remove">
+						<p class="like"><span class="glyphicon glyphicon-heart"></span> <i>收藏</i></p>
+						<p class="delete"><span class="glyphicon glyphicon-trash"></span> <i>删除</i></p>
+					</td>
+				</tr>
+			<% } %>
+		</script>
 		<div class="header_con"></div>
 		<script>
 			$.ajax({
@@ -36,6 +63,13 @@
 				<p class="fl"><span class="glyphicon glyphicon-shopping-cart"></span> 我的购物车共<i>0</i>件商品</p>				
 				<img src="../img/liu.png" class="fr"/>
 			</div>
+			<div class="no_order">
+				<img src="../img/cart.png" class="fl"/>
+				<div class="fl">
+					<p>购物车里空空如也，赶紧去<a href="index.html"> 逛逛吧></a></p>
+					<p>或者您可以先进行<a href="login.html"> 登陆></a></p>
+				</div>
+			</div>
 			<table class="table table-hover">
 				<tr>
 					<th>商品信息</th>
@@ -44,79 +78,17 @@
 					<th>金额（元）</th>
 					<th>操作</th>
 				</tr>
-				<tr>
-					<td class="img">
-						<img src="../img/1F_1.png" />
-						<div class="info fl">
-							<p class="name"><a href="">asfsdfadsfasdfasd</a></p>
-							<p class="specification">sdfasdfa</p>
-						</div>
-					</td>
-					<td class="price">¥190.00</td>
-					<td class="count">
-						<div class="input-group">
-							<div class="input-group-addon">-</div>
-							<input class="form-control" type="text" value="1" disabled="disabled"/>
-							<div class="input-group-addon">+</div>
-						</div>
-					</td>
-					<td class="totle">¥190.00</td>
-					<td class="remove">
-						<p><a href=""><span class="glyphicon glyphicon-heart"></span> 收藏</a></p>
-						<p><a href=""><span class="glyphicon glyphicon-trash"></span> 删除</a></p>
-					</td>
-				</tr>
-				<tr>
-					<td class="img">
-						<img src="../img/1F_1.png" />
-						<div class="info fl">
-							<p class="name"><a href="">asfsdfadsfasdfasd</a></p>
-							<p class="specification">sdfasdfa</p>
-						</div>
-					</td>
-					<td class="price">¥190.00</td>
-					<td class="count">
-						<div class="input-group">
-							<div class="input-group-addon">-</div>
-							<input class="form-control" type="text" value="1" disabled="disabled"/>
-							<div class="input-group-addon">+</div>
-						</div>
-					</td>
-					<td class="totle">¥190.00</td>
-					<td class="remove">
-						<p><a href=""><span class="glyphicon glyphicon-heart"></span> 收藏</a></p>
-						<p><a href=""><span class="glyphicon glyphicon-trash"></span> 删除</a></p>
-					</td>
-				</tr>
-				<tr>
-					<td class="img">
-						<img src="../img/1F_1.png" />
-						<div class="info fl">
-							<p class="name"><a href="">asfsdfadsfasdfasd</a></p>
-							<p class="specification">sdfasdfa</p>
-						</div>
-					</td>
-					<td class="price">¥190.00</td>
-					<td class="count">
-						<div class="input-group">
-							<div class="input-group-addon">-</div>
-							<input class="form-control" type="text" value="1" disabled="disabled"/>
-							<div class="input-group-addon">+</div>
-						</div>
-					</td>
-					<td class="totle">¥190.00</td>
-					<td class="remove">
-						<p><a href=""><span class="glyphicon glyphicon-heart"></span> 收藏</a></p>
-						<p><a href=""><span class="glyphicon glyphicon-trash"></span> 删除</a></p>
-					</td>
-				</tr>
 			</table>
 			<div class="pay">
 				<p class="fl"><a href=""><span class="glyphicon glyphicon-trash"></span> 清空购物车</a></p>
 				<p class="fr">
-					总共<span>0</span>件，订单金额（不含运费）：<sub>¥</sub><i>1213</i>
+					总共<span>0</span>件，订单金额（不含运费）：<sub>¥</sub><i>0</i>
 					<a href="">去结算</a>
 				</p>
+			</div>
+			<div class="p">
+				<img src="../img/tip.png" />
+				<img src="../img/aboutcart.png" />
 			</div>
 		</div>
 		<div class="footer_con"></div>

@@ -5,5 +5,6 @@ requirejs.config({
 		"header":"header.min",
 		"footer":"footer.min",
 		"aside":"aside.min",
+		"bootstrap":"bootstrap.min"
 	}
 })

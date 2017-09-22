@@ -1,5 +1,44 @@
 define(['jquery'],function($){
+	var cookie={
+		set: function(name, val, expires, path, domain, secure) { //设置cookie
+			var cookieText = name + "=" + val;
+			if(expires instanceof Date) {
+				cookieText += ";expires=" + expires;
+			}
+			if(path) {
+				cookieText += ";path=" + path;
+			}
+			if(domain) {
+				cookieText += ";domain=" + domain;
+			}
+			if(secure) {
+				cookieText += ";secure";
+			}
+			document.cookie = cookieText;
+		},
+		get: function(name) { //获取cookie
+			var cookieArr = document.cookie.split('; ');
+			for(var i = 0; i < cookieArr.length; i++) {
+				var nameArr = cookieArr[i].split('=');
+				if(nameArr[0] === name) {
+					return nameArr[1];
+				}
+			}
+			return null;
+		}
+	}
 	$(function(){
+		//获取用户名
+		var username=cookie.get("userName");
+		if(username&&username!=""){
+			$(".login").html(username +"<a class='exit'> 退出</a>");
+		}else{
+			$(".login").html("[  <a href='login.html'>登录</a>  |  <a href='signin.html'>注册</a>  ]");
+		}
+		$(".login").on("click",".exit",function(){
+			cookie.set("userName","");
+			$(".login").html("[  <a href='login.html'>登录</a>  |  <a href='signin.html'>注册</a>  ]");
+		})
 		var i=-1;
 		//我的音平显示和消失
 		$(".ul_aboutme li:eq(0)").hover(function(){
@@ -74,11 +113,17 @@ define(['jquery'],function($){
 					e.preventDefault();
 					$("div[tip='true'] .tip ul").slideUp(200,function(){
 						$("div[tip='true'] .tip ul").html("");
-						$("div[tip='true'] .search .button").trigger("click");
+						$("div[tip='true'] .button").trigger("click");
 					});
 				}
 			}			
 		})
+		//点击搜索
+		$("div[tip='true'] .button").on("click",function(){
+			console.log(1)
+			var val=$("div[tip='true'] input").val();
+			location.href="/comp/search?kw="+val+"&sort=monthSalesCount&order=desc&offset=0&max=24";
+		});
 		//单击空白处提示栏消失（滑出）
 		$(document).on("click",function(){
 			if($("div[tip='true'] .tip ul").css("display")!="none"){
@@ -135,4 +180,5 @@ define(['jquery'],function($){
 			$(this).find(".menu_third").fadeOut(200);
 		})
 	})
+	return cookie;
 })

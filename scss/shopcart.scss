@@ -61,6 +61,7 @@ $margin:0 auto;
                 }
             }
             .price{
+                width: 150px;
                 font-size: 16px;
                 font-weight: 600;
             }
@@ -69,20 +70,34 @@ $margin:0 auto;
                 .input-group-addon{
                     cursor: pointer;
                     background: #FBFBFB;
+                    -webkit-user-select: none;
                 }
                 input{
+                    text-align: center;
                     background: white;
+                    padding: 6px 0;
                 }
             }
             .totle{
+                width: 150px;
                  font-size: 16px;
                 font-weight: 600;
                 color: nth($color,1);
                 
             }
             .remove{
+                width: 80px;
                 p{
                     margin: 5px 0;
+                    cursor: pointer;
+                    width: 100%;
+                    text-align: center;
+                }
+                p:hover{
+                    color: nth($color,1);
+                }
+                .active{
+                    color: nth($color,1);
                 }
             }
         }
@@ -111,6 +126,29 @@ $margin:0 auto;
                 font-weight: 600;
                 margin-left: 30px;
                 vertical-align: top;
+            }
+        }
+    }
+    .p{
+        text-align: center;
+        margin-top: 30px;
+        img{
+            margin-bottom: 20px;
+        }
+    }
+    .no_order{
+        height: 260px;
+        padding: 109px 0 0 345px;
+        .fl{
+            height: 42px;
+            p{
+                padding-left: 10px;
+                line-height: 21px;
+                line-height: 21px;
+                font-size: 14px;
+                a{
+                    color: nth($color,1);
+                }
             }
         }
     }

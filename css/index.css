@@ -172,10 +172,11 @@ p, ul {
   white-space: pre-wrap;
 }
 .header_bg .header .login {
-  color: #DDDEE5;
+  color: #666;
 }
 .header_bg .header .login a {
   color: #FF6600;
+  cursor: pointer;
 }
 .header_bg .header .ul_aboutme {
   height: 33px;
@@ -1158,6 +1159,9 @@ i, em {
   height: 36px;
   width: 30px;
   background: url(../img/right_sprit.png) no-repeat 6px -20px;
+}
+.aside .shopping ul .cart a {
+  color: white;
 }
 .aside .shopping ul .cart p {
   padding: 0 8px;
